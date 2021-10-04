@@ -217,6 +217,10 @@
 }
 
 @media screen and (max-width: 1366px) {
+    #intro-text-container {
+        max-height: 325px;
+    }
+
     html {
         font-size: 17px;
     }
