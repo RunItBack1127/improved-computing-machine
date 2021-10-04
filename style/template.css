@@ -21,6 +21,29 @@
     background-color: rgba(100, 66, 50, 0.75);
 }
 
+/** Filler brackets */
+.template__filler-bracket {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 5%;
+    width: 100px;
+    height: 100vh;
+}
+
+.template__filler-bracket img {
+    height: 75%;
+    position: relative;
+    top: 50px;
+    opacity: 0.6;
+}
+
+.template__filler-bracket[orientation="right"] img {
+    transform: scaleX(-1);
+}
+
 /** Top menu container */
 #top_menu_container {
     position: absolute;
