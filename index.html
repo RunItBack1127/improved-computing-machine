@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIL SHOP WEBSITE</title>
+
+    <link rel="stylesheet" href="template.css">
+
+    <style id="template__base-style">
+        @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Catamaran", sans-serif;
+            font-size: 20px;
+        }
+
+        img, a {
+            display: block;
+        }
+        
+        img {
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        @font-face {
+            src: url('RocaOne-It.ttf');
+            font-family: "Roca Italic";
+        }
+    </style>
+
+    <script id="selected-tabs-script">
+        function selectTab(tabName) {
+            const about = document.getElementById('about-tab');
+            const location = document.getElementById('location-tab');
+            const contact = document.getElementById('contact-tab');
+
+            const tab = tabName === 'About' ? about :
+                tabName === 'Location' ? location :
+                tabName === 'Contact' ? contact : null;
+                
+            if( tab.getAttribute('tab-status') !== 'active' ) {
+                tab.setAttribute('tab-status', 'active');
+            }
+        }
+
+        function idleTabs() {
+            const curTab = document.querySelector('a[tab-status="active"]');
+            curTab.setAttribute('tab-status', 'idle');
+        }
+    </script>
+</head>
+<body>
+    <div id="top-menu-container">
+        <div id="template__menu-container">
+            <div id="template__logo-container">
+                <img src="template-logo.png">
+                <p>High Quality Salon Service Since 2011</p>
+            </div>
+            <nav id="site-navigation-refs">
+                <ul>
+                    <li><a tab-status="idle" id="about-tab" onmouseover="selectTab('About')" onmouseout="idleTabs()" href="">About</a></li>
+                    <li><a tab-status="idle" id="location-tab" onmouseover="selectTab('Location')" onmouseout="idleTabs()" href="">Location</a></li>
+                    <li><a tab-status="idle" id="contact-tab" onmouseover="selectTab('Contact')" onmouseout="idleTabs()" href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="site-intro-container">
+        <div id="intro-content-container">
+            <h1>Easy and beautiful walk-in nail service</h1>
+            <hr>
+            <h2>We are one of the most trusted and reliable nail shops in the Raleigh area! Come see why!</h2>
+            <a href="">Our Offers</a>
+        </div>
+    </div>
+
+    <div class="template__background" id="template__background-image-container">
+        <img src="template-bg.jpg">
+    </div>
+    <div class="template__background" id="template__background-overlay"></div>
+</body>
+</html>

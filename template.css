@@ -1,0 +1,147 @@
+/** Background image and overlay */
+.template__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#template__background-image-container {
+    z-index: -3;
+}
+
+#template__background-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+#template__background-overlay {
+    z-index: -2;
+    background-color: rgba(100, 66, 50, 0.75);
+}
+
+/** Top menu container */
+#top_menu_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#template__menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 115px;
+    margin: 0 auto;
+}
+
+#template__logo-container {
+    width: 350px;
+    text-align: center;
+}
+
+#template__logo-container img {
+    width: inherit;
+    filter: invert(1);
+}
+
+#template__logo-container p {
+    color: #fff;
+    margin-top: -0.75rem;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#site-navigation-refs {
+    width: 300px;
+}
+
+#site-navigation-refs ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 1.25rem;
+}
+
+#site-navigation-refs ul li a {
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid rgba(253, 223, 190, 0.0);;
+    transition: border-top 200ms ease-in-out;
+    padding: 0.25em 0;
+    color: #fff;
+}
+
+/** Intro splash text and offers */
+#site-intro-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#intro-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 275px;
+    color: #fff;
+    margin-top: -2.5rem;
+}
+
+#intro-content-container h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 400;
+}
+
+#intro-content-container hr {
+    width: 50%;
+    border: 1px solid inherit;
+    color: #fff;
+}
+
+#intro-content-container h2 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 200;
+}
+
+#intro-content-container a {
+    position: absolute;
+    color: inherit;
+    font-size: 2rem;
+    bottom: 3.75rem;
+    width: 35%;
+    border: 2px solid rgb(144, 238, 144);
+    padding: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.35rem;
+    text-align: center;
+    transition: background-color 200ms ease-in-out;
+}
+
+#intro-content-container a:hover {
+    background-color: rgba(144, 238, 144, 0.25);
+}
+
+/** Current site tab */
+#site-navigation-refs ul li a[tab-status="active"] {
+    color: #fddfbe;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid rgba(253, 223, 190, 1.0);
+}
