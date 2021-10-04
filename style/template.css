@@ -56,7 +56,20 @@
     font-style: italic;
 }
 
-#phone-info-container {
+#socials-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.5%;
+    max-width: 175px;
+}
+
+#socials-container img {
+    width: 1.5rem;
+    filter: invert(1);
+}
+
+/* #phone-info-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +88,7 @@
     color: #fddfbe;
     text-transform: uppercase;
     font-weight: 400;
-}
+} */
 
 #site-navigation-refs {
     width: 300px;
