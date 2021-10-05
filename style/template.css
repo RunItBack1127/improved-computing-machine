@@ -194,7 +194,7 @@
     position: absolute;
     color: inherit;
     font-size: 2rem;
-    bottom: 10%;
+    bottom: 8.5%;
     width: 35%;
     max-width: 500px;
     border: 2px solid rgb(144, 238, 144);
@@ -217,7 +217,11 @@
 }
 
 @media screen and (max-width: 1366px) {
+    #intro-content-container {
+        max-height: 300px;
+    }
+
     html {
-        font-size: 17px;
+        font-size: 17.5px;
     }
 }
